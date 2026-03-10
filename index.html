@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+<title>Yousra Elalami Portfolio</title>
+</head>
+
+<div id="preloader">
+    <div class="loader-content">
+        <div class="logo-drawn">
+            <div class="logo-inner-circle">
+                <span class="letter-y">Y</span>
+                <span class="letter-e">E</span>
+            </div>
+        </div>
+        <div class="loader-spinner"></div>
+    </div>
+</div>
+
+<body>
+ <!-- menu -->
+
+<header class="header">
+  
+    <a href="#home" class="logo" >Yousra Elalami</a>
+    <i class="bx bx-menu" id="menu-icon"></i>
+
+    <nav class="navbar">
+
+<a href="#APropose" data-i18n=" à Propose" onclick="resetTabs()"> à Propose</a>
+<a href="#Diplômes" data-i18n="Diplômes">Diplômes</a>
+<a href="#Attestations" data-i18n="Attestations">Attestations</a>
+
+<a href="#Compétences" data-i18n="diploma">Compétences</a>
+<a href="#image" data-i18n="image">Portfolio</a>
+<a href="#contact" data-i18n="contact">Contact</a>
+
+    </nav>
+
+
+ <!-- Boutons de langue -->
+ <div class="dropdown" >
+    <button class="dropbtn">
+        <i class="fa-solid fa-earth-americas"></i> Fr <span id="current-lang">Fr</span>
+        <i class="fas fa-caret-down"></i> </button>
+    
+    <div class="dropdown-content">
+        <a href="#" onclick="changeLang('fr')">Français</a>
+        <a href="#" onclick="changeLang('en')">English</a>
+        <a href="#" onclick="changeLang('ar')">العربية</a>
+        <a href="#" onclick="changeLang('al')">Allemand</a>
+    </div>
+</div>
+</header>
+
+<section class="home" id="home" >
+    <div class="home-img" >
+    <img src="image/01.png" alt="Profile img" >
+    </div>
+
+    <div class="home-content">
+    <h3 data-i18n="hello" >Hello, My name is</h3>
+    <h1 data-i18n="name">Yousra !</h1>
+
+<h3>
+  <span id="job" data-i18n="job" ></span>
+  <span data-i18n="role" class="multiple-text"></span>
+</h3>
+       <p data-i18n="intro">
+  I am a State-Certified Engineer in Computer Science and Management.
+</p>
+        <div class="social-media">
+            <a href="https://www.linkedin.com/in/yousra-el-alami-22a621238?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class='bx bxl-linkedin'></i></a> 
+            <a href="https://www.facebook.com/youssra.el.148"><i class='bx bxl-facebook'></i></a> 
+            <a href="#"><i class='bx bxl-instagram'></i></a> 
+        </div>
+
+        <a href="cv yousra elalami.pdf" class="btn" data-i18n=" btn_download">Télécharger CV</a>
+
+
+
+    </div>
+</section>
+
+<script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+
+<script>
+(function(){
+emailjs.init("YOUR_PUBLIC_KEY");
+})();
+</script>
+
+ <!-- page home -->
+<section class="APropose" id="APropose">
+    <div class="tabs-section">            
+        <h2 class="heading" style="margin-bottom: 80px; font-family: 'Dancing Script', cursive;"> à Propose </h2>
+
+        <div class="tabs-buttons">
+            <button class="tab-btn active" data-tab="presentation">Présentation</button>
+            <button class="tab-btn" data-tab="langues">Langues</button>
+            <button class="tab-btn" data-tab="skills">Soft skills</button>
+            <button class="tab-btn" data-tab="passions">Centres d’intérêt</button>
+        </div>
+        
+        <div class="tabs-container">
+            <div class="tab-content active" id="presentation">
+                <p>
+                    Je suis titulaire d'un diplome d'ingénieur d'etat en informatique et Gestion souhaitant se spécialisant dans le développement web et mobile. J’oriente mes études dans ce domaine, guidé par mon désir d'apprendre et ma curiosité. En tant que passionné, j’aime participer activement aux activités d’une entreprise, mais aussi créer des projets personnels, dans le but d'augmenter en compétences.
+                </p>
+            </div>
+
+            <div class="tab-content" id="langues">
+                <div class="langues-wrapper">
+        
+        <div class="langue-item">
+            <div class="flag-box">
+                <img src="https://flagcdn.com/w160/ma.png" alt="Maroc">
+            </div>
+            <div class="langue-text">
+                <h3><span>Arabe</span></h3>
+                <p>Langue Maternelle</p>
+            </div>
+        </div>
+
+        <div class="langue-item">
+            <div class="flag-box">
+                <img src="https://flagcdn.com/w160/fr.png" alt="France">
+            </div>
+            <div class="langue-text">
+                <h3><span>Français</span></h3>
+                <p>Bilingue</p>
+            </div>
+        </div>
+
+        <div class="langue-item">
+            <div class="flag-box">
+                <img src="https://flagcdn.com/w160/gb.png" alt="UK">
+            </div>
+            <div class="langue-text">
+                <h3><span>Anglais</span></h3>
+                <p>Usage Professionnel</p>
+            </div>
+        </div>
+
+        <div class="langue-item">
+            <div class="flag-box">
+                <img src="https://flagcdn.com/w160/de.png" alt="Allemagne">
+            </div>
+            <div class="langue-text">
+                <h3><span>Allemand</span></h3>
+                <p>Intermédiaire (B1)</p>
+            </div>
+        </div>
+
+    </div>
+            </div>
+
+            <div class="tab-content" id="skills">
+                <ul>
+                    <li><span>Intelligence émotionnelle :</span>  Je suis quelqu'un d'empathique, sympathique et toujours optimiste. </li>
+                    <li><span>Intelligence relationnelle :</span> Esprit d'équipe, agit toujours pour maintenir une coopération positive.</li>
+                    <li><span>Curiosité :</span> J'aime toujours en apprendre plus sur tous les sujets.</li>
+                    <li><span>Ponctualité</span> et bonne gestion du temps.</li>
+                    <li><span>Capacité de résolution :</span> J'aime trouver la solution la plus simple pour répondre à un besoin, que ce soit seul ou en équipe.</li>
+
+                </ul>
+            </div>
+
+            <div class="tab-content" id="passions">
+                <ul>
+                    <li><span>Voyage</span></li>
+                    <li><span>Sport</span></li>
+                    <li><span>Dessin</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="APropose-img">
+        <img src="image/01.png" alt="Profile img">
+    </div>
+</section>
+
+<!--pour les formation -->
+<section class="Diplômes" id="Diplômes">
+
+            <h2 class="heading" style="margin-bottom: 100px; font-family: 'Dancing Script', cursive;"> Diplômes</h2>    
+    <div class="timeline">
+        <div class="container left">
+            <div class="date-label">2021 - 2024</div>
+            <div class="content">
+                <h3>Diplome d’ingénierie D'Etat (bac +5)</h3>
+                <p> Diplome d’ingénierie en Informatique et Gestion </p>
+                <p>EHEI (Ecole des Hautes Etudes d’ingénierie), Oujda</p>
+            </div>
+        </div>
+
+        <div class="container right">
+            <div class="date-label">2019 - 2021</div>
+            <div class="content">
+                <h3>Diplome technicien Spécialisé (bac +2)</h3>
+                <p>Diplome technicien Spécialisé en Développement Informatique </p>
+                <p>ISTA (Institut Spécialisé de Technologie Appliquée Lazaret), Oujda</p>
+            </div>
+        </div>
+
+        <div class="container left">
+            <div class="date-label">2018 - 2029</div>
+            <div class="content">
+                <h3> FSO première année </h3>
+                <p> Options: Physique et Chimie</p>
+                <p>FSO (Université Mohammed Premier faculté des sciences),Oujda </p>
+            </div>
+        </div>
+
+        <div class="container right">
+            <div class="date-label">2017 - 2018</div>
+            <div class="content">
+                <h3> Baccalauréat Scientifique</h3>
+                <p>BAC Sciences Physique et Chimie</p>
+                <p>Lycée Zaytoune , Elaioune Sidi Malouk</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- attestation-->
+
+<section class="referents-section" id="Attestations">
+    <h2 class="heading" style="margin-bottom:-50px;font-family: 'Dancing Script', cursive;">Attestations</h2>
+    
+    <div class="ref-wrapper">
+        <div class="ref-card">
+            <div class="ref-img-box">
+                <img src="image/salse.png" >
+            </div>
+            <div class="ref-text-content">
+                <h3>SalesForce</h3>
+                <div class="ref-line"></div>
+                <p> Attestation de formation SalesForce à l’école (EHEI)</p>
+                                                <p><span>Mars - Juin 2022  (4 mois)</span></p>
+
+                <a href=class="ref-email">Voir </a>
+            </div>
+        </div>
+
+ <div class="ref-card">
+            <div class="ref-img-box">
+                <img src="image/jalios.jpeg"  >
+            </div>
+            <div class="ref-text-content">
+                <h3>Jalios Community</h3>
+                <div class="ref-line"></div>
+                <p>Attestation de formation jalios community à l’entreprise (GIANTLINK) </p>
+                                <p><span>Mars - Juin 2022  (4 mois)</span></p>
+                <a href=class="ref-email">Voir </a>
+            </div>
+        </div>
+       
+          <div class="ref-card">
+            <div class="ref-img-box">
+                <img src="image/desin.png" >
+            </div>
+            <div class="ref-text-content">
+                <h3>Graphic Design</h3>
+                <div class="ref-line"></div>
+                <p>Attestation de formation Graphic Design <h2>Ps, Ai, Id </h2>   </p>
+                                <p><span>Février - JUIN 2025 (6 mois)</span></p>
+
+                <a href=class="ref-email">Voir </a>
+            </div>
+        </div>
+       <div class="ref-card">
+            <div class="ref-img-box">
+                <img src="image/sap.png" >
+            </div>
+            <div class="ref-text-content">
+                <h3> SAP </h3>
+                <div class="ref-line"></div>
+                <p > Attestation de formation SAP à l’école (EHEI)</p>
+                                                                <p ><span>Octobre - janvier 2024  (4 mois)</span> </p>
+                <a href=class="ref-email">Voir </a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+<section class="Compétences" id="Compétences">
+    <h2 class="heading" style="margin-bottom:10px;font-family: 'Dancing Script', cursive;">Compétences</h2>
+
+    <div class="services-container" >
+        <div class="services-box">
+          <i class='bx bx-code-block' style="margin-top:-70px;"></i>  
+            <h3 style="margin-top: -10px; margin-bottom: 30px;">Web </h3>
+
+           <div class="skill-item">
+                <div class="skill-row">
+                    <span class="skill-name">HTML/CSS/JS</span>
+                    <span class="skill-percent">85%</span>
+                </div>
+                <div class="progress-line"><span class="bar" style="--target-width:85%"></span></div>
+            </div>
+              <div class="skill-item">
+                <div class="skill-row">
+                    <span class="skill-name">Bootsrap</span>
+                    <span class="skill-percent">70%</span>
+                </div>
+                <div class="progress-line"><span class="bar" style="--target-width:70%"></span></div>
+            </div>
+              <div class="skill-item">
+                <div class="skill-row">
+                    <span class="skill-name">JQuery</span>
+                    <span class="skill-percent">65%</span>
+                </div>
+                <div class="progress-line"><span class="bar" style="--target-width:65%"></span></div>
+            </div>
+
+            <div class="skill-item">
+                <div class="skill-row">
+                    <span class="skill-name">PHP</span>
+                    <span class="skill-percent">80%</span>
+                </div>
+                <div class="progress-line"><span class="bar" style="--target-width:80%"></span></div>
+            </div>
+
+            <div class="skill-item">
+                <div class="skill-row">
+                    <span class="skill-name">Angular</span>
+                    <span class="skill-percent">60%</span>
+                </div>
+                <div class="progress-line"><span class="bar" style="--target-width:60%"></span></div>
+            </div>
+       
+        
+        <div class="skill-item">
+                <div class="skill-row">
+                    <span class="skill-name">Symfony</span>
+                    <span class="skill-percent">60%</span>
+                </div>
+                <div class="progress-line"><span class="bar" style="--target-width:60%"></span></div>
+            </div>
+     
+
+        <div class="skill-item">
+                <div class="skill-row">
+                    <span class="skill-name">NodeJS</span>
+                    <span class="skill-percent">60%</span>
+                </div>
+                <div class="progress-line"><span class="bar" style="--target-width:60%"></span></div>
+            </div>
+        </div>
+        <div class="services-box">
+            <i class='bx bx-data' style="margin-top:-70px;"></i>
+
+            <h3 style="margin-top: -10px; margin-bottom: 30px;">Base de données</h3>
+
+           
+   <div class="skill-item">
+                <div class="skill-row">
+                    <span class="skill-name">MySql</span>
+                    <span class="skill-percent">85%</span>
+                </div>
+                <div class="progress-line"><span class="bar" style="--target-width:85%"></span></div>
+            </div>
+               <div class="skill-item">
+                <div class="skill-row">
+                    <span class="skill-name">PostgreSQL </span>
+                    <span class="skill-percent">75%</span>
+                </div>
+                <div class="progress-line"><span class="bar" style="--target-width:75%"></span></div>
+            </div>
+
+            <div class="skill-item">
+                <div class="skill-row">
+                    <span class="skill-name">MogoDb</span>
+                    <span class="skill-percent">70%</span>
+                </div>
+                <div class="progress-line"><span class="bar" style="--target-width:70%"></span></div>
+            </div>
+
+<div class="skill-item">
+                <div class="skill-row">
+                    <span class="skill-name">cassandra</span>
+                    <span class="skill-percent">65%</span>
+                </div>
+                <div class="progress-line"><span class="bar" style="--target-width:65%"></span></div>
+            </div>
+            
+            <div class="skill-item">
+                <div class="skill-row">
+                    <span class="skill-name">Merise</span>
+                    <span class="skill-percent">80%</span>
+                </div>
+                <div class="progress-line"><span class="bar" style="--target-width:80%"></span></div>
+            </div>
+
+             <div class="skill-item">
+                <div class="skill-row">
+                    <span class="skill-name">UML</span>
+                    <span class="skill-percent">80%</span>
+                </div>
+                <div class="progress-line"><span class="bar" style="--target-width:80%"></span></div>
+            </div>
+        </div>
+
+        <div class="services-box">
+  <i class="bx bx-code" style="margin-top: -70px;"></i>        
+    <h3 style="margin-top: -10px; margin-bottom: 30px;">Programmation</h3>
+
+            <div class="skill-item">
+                <div class="skill-row">
+                    <span class="skill-name">C#</span>
+                    <span class="skill-percent">80%</span>
+                </div>
+                <div class="progress-line"><span class="bar" style="--target-width:80%"></span></div>
+            </div>
+
+            <div class="skill-item">
+                <div class="skill-row">
+                    <span class="skill-name">Java</span>
+                    <span class="skill-percent">70%</span>
+                </div>
+                <div class="progress-line"><span class="bar" style="--target-width:70%"></span></div>
+            </div>
+             <div class="skill-item">
+                <div class="skill-row">
+                    <span class="skill-name">Asp .Net MVC</span>
+                    <span class="skill-percent">85%</span>
+                </div>
+                <div class="progress-line"><span class="bar" style="--target-width:85%"></span></div>
+            </div> <div class="skill-item">
+                <div class="skill-row">
+                    <span class="skill-name">C++</span>
+                    <span class="skill-percent">70%</span>
+                </div>
+                <div class="progress-line"><span class="bar" style="--target-width:70%"></span></div>
+            </div>
+              <div class="skill-item">
+                <div class="skill-row">
+                    <span class="skill-name">C</span>
+                    <span class="skill-percent">75%</span>
+                </div>
+                <div class="progress-line"><span class="bar" style="--target-width:75%"></span></div>
+          
+            
+                    </div>
+
+        </div>
+         <div class="services-box">
+            <i class="bx bx-palette" style="margin-top: -70px; margin-bottom: 5px;" ></i>
+            <h3 style="margin-top: -10px; margin-bottom: 30px;">Design Graphique</h3>
+
+            <div class="skill-item">
+                <div class="skill-row">
+                    <span class="skill-name">Photoshop</span>
+                    <span class="skill-percent">80%</span>
+                </div>
+                <div class="progress-line"><span class="bar" style="--target-width:80%"></span></div>
+            </div>
+
+            <div class="skill-item">
+                <div class="skill-row">
+                    <span class="skill-name">Illustrator</span>
+                    <span class="skill-percent">80%</span>
+                </div>
+                <div class="progress-line"><span class="bar" style="--target-width:80%"></span></div>
+            </div>
+
+            <div class="skill-item">
+                <div class="skill-row">
+                    <span class="skill-name">InDesign</span>
+                    <span class="skill-percent">70%</span>
+                </div>
+                <div class="progress-line"><span class="bar" style="--target-width:70%"></span></div>
+            </div>
+        </div>
+
+
+<div class="services-box">
+            <i class="bx bx-line-chart" style="margin-top:-70px;"></i>
+            <h3 style="margin-top: -10px; margin-bottom: 30px;">Gestion</h3>
+
+            <div class="skill-item">
+                <div class="skill-row">
+                    <span class="skill-name">Comptabilité</span>
+                    <span class="skill-percent">85%</span>
+                </div>
+                <div class="progress-line"><span class="bar" style="--target-width:85%"></span></div>
+            </div>
+
+            <div class="skill-item">
+                <div class="skill-row">
+                    <span class="skill-name">Finance</span>
+                    <span class="skill-percent">70%</span>
+                </div>
+                <div class="progress-line"><span class="bar" style="--target-width:70%"></span></div>
+            </div>
+
+            <div class="skill-item">
+                <div class="skill-row">
+                    <span class="skill-name">Marketing Et E-commerce</span>
+                    <span class="skill-percent">65%</span>
+                </div>
+                <div class="progress-line"><span class="bar" style="--target-width:65%"></span></div>
+            </div>
+
+              <div class="skill-item">
+                <div class="skill-row">
+                    <span class="skill-name">Management</span>
+                    <span class="skill-percent">70%</span>
+          ²      </div>
+                <div class="progress-line"><span class="bar" style="--target-width:70%"></span></div>
+            </div>
+              <div class="skill-item">
+                <div class="skill-row">
+                    <span class="skill-name"> économie </span>
+                    <span class="skill-percent">70%</span>
+                </div>
+                <div class="progress-line"><span class="bar" style="--target-width:70%"></span></div>
+            </div>
+        </div>
+
+
+        <div class="services-box">
+<i class='bx bx-dots-horizontal-rounded' style="margin-top:-70px;"></i>           
+ <h3 style="margin-top: -10px; margin-bottom: 30px;">Autres</h3>
+
+            <div class="skill-item">
+                <div class="skill-row">
+                    <span class="skill-name">SalesForce</span>
+                    <span class="skill-percent">75%</span>
+                </div>
+                <div class="progress-line"><span class="bar" style="--target-width:75%"></span></div>
+            </div>
+
+            <div class="skill-item">
+                <div class="skill-row">
+                    <span class="skill-name">SAP</span>
+                    <span class="skill-percent">65%</span>
+                </div>
+                <div class="progress-line"><span class="bar" style="--target-width:65%"></span></div>
+            </div>
+
+            <div class="skill-item">
+                <div class="skill-row">
+                    <span class="skill-name">jalios community</span>
+                    <span class="skill-percent">70%</span>
+                </div>
+                <div class="progress-line"><span class="bar" style="--target-width:70%"></span></div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+<!--carete-->
+<section class="image" id="image">
+<div class="testimonial-box">
+
+<h2 class="heading" style="margin-bottom:-20px;font-family: 'Dancing Script', cursive;" >Portfolio</h2>
+
+<div class="button-group">
+<button class="btn " data-target="perso">Projets personnels</button>
+<button class="btn active" data-target="pro">Projets professionnels</button>
+</div>
+
+<div class="wrapper">
+
+<!-- PROJET PROFESSIONNEL -->
+<div class="testimonial-item pro" data-target="pro">
+<div class="img-flip">
+
+<div class="img-back">
+<h3> Sujet De Stage : </h3>
+<h2>Site de recrutement maroc public / privé...</h2>
+</div>
+
+<div class="img-front">
+<img src="image/11.jpg" alt="">
+</div>
+
+</div>
+
+<h3>Stage à M2M Group au Développement informatique </h3>
+<h2>Casablanca (01 février 2026 - En Coures )</h2>
+
+<div class="tag-container">
+<span class="tag tag-html">MySql</span>
+<span class="tag tag-php">Java</span>
+<span class="tag tag-php">Tomcat</span>
+
+</div>
+</div>
+
+
+
+<!-- PROJET PROFESSIONNEL -->
+<div class="testimonial-item pro" data-target="pro">
+<div class="img-flip">
+
+<div class="img-back">
+<h2>Sujet De Stage :</h2>
+
+    <img src="image/10.png" alt=""><p>
+Le projet vise à développer un plugin pour Jalios JPlatform permettant
+une intégration avec la plateforme OpenRainbow pour messagerie,
+appels vocaux et vidéo.
+</p>
+        <img src="image/03.png" alt="">
+
+
+
+</div>
+
+<div class="img-front">
+<img src="image/033.png" alt="">
+</div>
+
+</div>
+
+<h3>Stage à Giantlink</h3>
+<h2>Fès 2024 (4 mois)</h2>
+
+<div class="tag-container">
+<span class="tag tag-html">Java</span>
+<span class="tag tag-php">Jalios</span>
+<span class="tag tag-html">OpenRainSDK</span>
+<span class="tag tag-php">Node Js</span>
+<span class="tag tag-php">Tomcat</span>
+</div>
+</div>
+
+
+
+<div class="testimonial-item pro" data-target="pro">
+<div class="img-flip">
+
+<div class="img-back">
+<h2>Sujet De Stage :</h2>
+
+<p>
+La Création d’une Application Relative à la Gestion du personnel.
+</p>
+</div>
+
+<div class="img-front">
+<img src="image/02.jpg" alt="">
+</div>
+
+</div>
+
+<h3>Stage à Sympanux</h3>
+<h2>Oujda 2021 (1 mois)</h2>
+
+<div class="tag-container">
+<span class="tag tag-html">C#</span>
+<span class="tag tag-php">MySql</span>
+</div>
+</div>
+<!-- PROJET PERSONNEL -->
+
+
+<div class="testimonial-item pro" data-target="perso">
+<div class="img-flip">
+
+<div class="img-back">
+<h2>Voila le Projet  :</h2>
+<img src="image/09.png" alt="">
+
+<img src="image/07.png" alt="">
+<img src="image/08.png" alt="">
+</div>
+
+<div class="img-front">
+<img src="image/06.jpg" alt="">
+</div>
+
+</div>
+
+<h3>Projets de 1 mois </h3>
+<h2>Création de posts Instagram, logos, cartes de visite, maquettes, mockups et flyers pour une agence de voyage.</h2>
+
+<div class="tag-container">
+<span class="tag tag-html"> Adobe Photoshop</span>
+<span class="tag tag-html"> Adobe Illustrator</span>
+
+<!-- Conteneur de l'image et du bouton -->
+<div class="pdf-container">
+  <a href="TRAVEL.PDF.pdf" download class="download-btn">Télécharger le PDF</a>
+</div>
+
+</div>
+</div>
+
+<div class="testimonial-item pro" data-target="perso">
+<div class="img-flip">
+
+<div class="img-back">
+<h2>Sujet De Stage :</h2>
+
+<p>La Création d’un Site web : E-commerce qui permet aux utilisateurs de vendre et d’acheter des produits en linge .
+</p>
+</div>
+
+<div class="img-front">
+<img src="image/05.jpg" alt="">
+</div>
+
+</div>
+
+<h3> Projets de 4 mois PFA</h3>
+<h2>Création d’un Site Web Projet De Fin D’année</h2>
+
+<div class="tag-container">
+<span class="tag tag-html">PHP</span>
+<span class="tag tag-php">HTML</span>
+<span class="tag tag-html">JavaScript</span>
+<span class="tag tag-php">Bootstrap</span>
+<span class="tag tag-html">Mysql</span>
+</div>
+</div>
+
+
+
+
+<div class="testimonial-item pro" data-target="perso">
+<div class="img-flip">
+
+<div class="img-back">
+<h2>Sujet De Stage :</h2>
+
+<p>
+réalisation d’un site web e-commerce de vente de vetements et de bijoux .
+</p>
+</div>
+
+<div class="img-front">
+<img src="image/04.jpg" alt="">
+</div>
+
+</div>
+
+<h3>Projets de 1 mois </h3>
+<h2>Réalisation d’un Site Web E-commerce </h2>
+<div class="tag-container">
+<span class="tag tag-html">wordPress</span>
+</div>
+</div>
+</div>
+
+</div>
+</section>
+
+
+
+
+<!-- contact-->
+<section class="contact" id="contact">
+  <h2 class="heading" style="margin-bottom:40px;font-family: 'Dancing Script', cursive; color: black;" >Me contacter</h2>
+
+  <form id="contact-form">
+     <div class="input-box">
+    <input type="text" name="from_name" placeholder="Votre nom / Prenom" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+    <input type="email" name="email" placeholder="Votre email" required></div>
+      <div class="input-box">
+    <input type="text" name="subject" placeholder="Objet">
+    <textarea name="message" placeholder="Votre message...." required cols="30" rows="10" placeholder="your message"></textarea></div>
+    <input type="submit" value="Envoyer" class="btn">
+  </form>
+
+  <p id="form-status"></p> <!-- Pour afficher un message sans alert -->
+</section>
+
+
+
+<!-- contact-->
+
+
+<footer class="footer">
+    <div class="social">
+            <a href="https://www.linkedin.com/in/yousra-el-alami-22a621238?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class='bx bxl-linkedin'></i></a> 
+          <a href="https://www.facebook.com/youssra.el.148"><i class='bx bxl-facebook'></i></a> 
+            <a href="#"><i class='bx bxl-instagram'></i></a> 
+
+    </div>
+    <p class="copyright">
+
+       &copy; YOUSRA ELALAMI - All Rights Reserved  
+    </p>
+</footer>
+
+
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script src="script.js"></script>
+
+</body>
+
+
+</html>
