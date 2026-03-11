@@ -299,15 +299,59 @@ font-size: 1.6rem;
 
 margin: 1rem 3rem ;
 }
-@media (max-width: 992px){
-    .services-container{
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
+@media (max-width: 992px) {
+    /* --- Styles des boutons corrigés pour le centrage et la grille --- */
 
-@media (max-width: 576px){
-    .services-container{
-        grid-template-columns: 1fr;
+    .tabs-buttons {
+        display: flex;
+        flex-wrap: wrap;       /* Essentiel pour la ligne 3+1 */
+        justify-content: center;
+        gap: 15px;             /* Espace entre les boutons */
+        max-width: 100%;       /* Prend toute la largeur */
+        margin: 0 auto;
+        padding: 0 10px;       /* Marge interne pour ne pas coller aux bords de l'écran */
+    }
+
+    .tab-btn {
+        /* 1. Correction du centrage du texte (très important) */
+        display: flex;
+        align-items: center;    /* Centre verticalement */
+        justify-content: center; /* Centre horizontalement (résout ton problème de Présentation) */
+        text-align: center;      /* En renfort */
+
+        /* 2. Taille des 3 premiers boutons pour la première ligne */
+        flex: 1 1 29%;          /* Taille de base à 29% pour en mettre 3 */
+        min-width: 110px;       /* Pour éviter qu'ils ne soient trop écrasés */
+        
+        /* 3. Style visuel (basé sur image_1.png) */
+        padding: 12px 10px;
+        border-radius: 50px;    /* Effet pilule */
+        border: 2px solid #333; /* Contour noir de image_1.png */
+        background-color: transparent; /* Fond clair de image_1.png */
+        font-family: inherit;   /* Utilise la police générale */
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.2;
+        color: #333;
+    }
+
+    /* 4. Gestion du dernier bouton "Centres d’intérêt" pour le centrer en dessous */
+    .tab-btn[data-tab="passions"] {
+        flex: 1 1 70%;         /* Plus large pour être centré en dessous */
+        min-width: 250px;
+    }
+
+    /* 5. Style du bouton actif (basé sur image_1.png et image_0.png) */
+    .tab-btn.active {
+        background-color: #B2533E; /* Rouge terre de Sienne de image_1.png */
+        color: white;              /* Texte blanc pour le contraste */
+        border-color: #B2533E;     /* Bordure de la même couleur */
+        box-shadow: 0 4px 6px rgba(178, 83, 62, 0.3); /* Légère ombre */
+    }
+
+    /* --- Conserver la grille des services --- */
+    .services-container {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -497,11 +541,7 @@ right: 0;
         margin-top: 8rem;
 
     }
-    .APropose-img img {
-        width: 70vw;
-        margin-top: 4rem;
-
-    }
+  
 
 }
 @media (max-width: 617px)
@@ -569,6 +609,18 @@ right: 0;
 }
 
 
+.tabs-container, .langue-item{
+    background: #f5f5f5;
+        padding: 25px;
+    position: relative;
+    border-radius: 10px;
+    transition: 0.3s ease;
+
+}
+
+
+
+
 .tabs-section {
   width: 80%;
   margin: 50px auto;
@@ -578,6 +630,7 @@ right: 0;
   display: flex;
   gap: 15px;
   margin-bottom: 25px;
+  
 }
 
 .tab-btn {
@@ -1168,27 +1221,30 @@ transform:rotateY(360deg);
 
 
 /* Style général des boutons .btn */
+/* Style des boutons */
 .button-group .btn {
-    display: inline-block;
-    padding: 1rem 2.8rem;       /* Padding style pilule */
-    border-radius: 50px;        /* Bords arrondis */
-    background-color: transparent; /* Fond transparent par défaut */
-    border: 2px solid black;    /* Bordure noire */
-    font-size: 1.6rem;
-    color: #333;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Légère ombre */
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  border: 2px solid #333;
+  background-color: transparent;
+  color: #333;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex: 1 1 auto; /* Permet au bouton de s’adapter à l’espace disponible */
+  min-width: 120px; /* Largeur minimale pour lisibilité */
+  text-align: center;
 }
+
 
 /* Bouton actif */
 .button-group .btn.active {
-    background-color: var(--main-color); /* Couleur principale */
-    color: white;                        /* Texte blanc */
-    border-color: var(--main-color);     /* Bordure assortie */
-    box-shadow: 0 4px 10px rgba(163,78,26,0.3); /* Ombrage un peu plus prononcé */
+  background-color: var(--main-color);
+  color: #fff;
+  border-color: var(--main-color);
+  box-shadow: 0 4px 10px rgba(163,78,26,0.3);
 }
+
 
 /* Effet hover */
 .button-group .btn:hover {
@@ -1212,7 +1268,7 @@ transform:rotateY(360deg);
     align-items: flex-start;
 }
 
-.ref-card {
+.ref-card{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1407,6 +1463,7 @@ span{
     align-items: center;
     flex-wrap: wrap; /* Pour le mobile */
     gap: 20px;
+    
 }
 
 /* Chaque bloc (Drapeau + Texte) */
