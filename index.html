@@ -16,11 +16,13 @@
             <div class="logo-inner-circle">
                 <span class="letter-y">Y</span>
                 <span class="letter-e">E</span>
+               
             </div>
         </div>
         <div class="loader-spinner"></div>
     </div>
 </div>
+
 
 <body>
  <!-- menu -->
@@ -32,13 +34,13 @@
 
     <nav class="navbar">
 
-<a href="#APropose" data-i18n=" à Propose" onclick="resetTabs()"> à Propose</a>
+<a href="#APropose" data-i18n="àPropose" onclick="resetTabs()"> à Propose</a>
 <a href="#Diplômes" data-i18n="Diplômes">Diplômes</a>
 <a href="#Attestations" data-i18n="Attestations">Attestations</a>
 
-<a href="#Compétences" data-i18n="diploma">Compétences</a>
-<a href="#image" data-i18n="image">Portfolio</a>
-<a href="#contact" data-i18n="contact">Contact</a>
+<a href="#Compétences" data-i18n="Compétences">Compétences</a>
+<a href="#image" data-i18n="Portfolio">Portfolio</a>
+<a href="#contact" data-i18n="Contact">Contact</a>
 
     </nav>
 
@@ -53,14 +55,14 @@
         <a href="#" onclick="changeLang('fr')">Français</a>
         <a href="#" onclick="changeLang('en')">English</a>
         <a href="#" onclick="changeLang('ar')">العربية</a>
-        <a href="#" onclick="changeLang('al')">Allemand</a>
+        <a href="#" onclick="changeLang('de')">Allemand</a>
     </div>
 </div>
 </header>
 
 <section class="home" id="home" >
     <div class="home-img" >
-    <img src="01.png" alt="Profile img" >
+    <img src="image/01.png" alt="Profile img" >
     </div>
 
     <div class="home-content">
@@ -80,14 +82,13 @@
             <a href="#"><i class='bx bxl-instagram'></i></a> 
         </div>
 
-        <a href="cv yousra elalami.pdf" class="btn" data-i18n=" btn_download">Télécharger CV</a>
-
-
+<a id="cv-download" href="cv yousra elalami.pdf" download class="btn" data-i18n="btn_download">
+Télécharger CV
+</a>
 
     </div>
 </section>
 
-<script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
 
@@ -100,21 +101,19 @@ emailjs.init("YOUR_PUBLIC_KEY");
  <!-- page home -->
 <section class="APropose" id="APropose">
     <div class="tabs-section">            
-        <h2 class="heading" style="margin-bottom: 80px; font-family: 'Dancing Script', cursive;"> à Propose </h2>
+        <h2 class="heading" style="margin-bottom: 80px; font-family: 'Dancing Script', cursive;"  data-i18n="à_Propose"> à Propose </h2>
 
         <div class="tabs-buttons">
-            <button class="tab-btn active" data-tab="presentation">Présentation</button>
-            <button class="tab-btn" data-tab="langues">Langues</button>
-            <button class="tab-btn" data-tab="skills">Soft skills</button>
-            <button class="tab-btn" data-tab="passions">Centres d’intérêt</button>
+            <button class="tab-btn active" data-tab="presentation" data-i18n="presentation">Présentation</button>
+            <button class="tab-btn" data-tab="langues" data-i18n="Langues1">Langues</button>
+            <button class="tab-btn" data-tab="skills" data-i18n="skills">Soft skills</button>
+            <button class="tab-btn" data-tab="passions" data-i18n="passions">Centres d’intérêt</button>
         </div>
         
         <div class="tabs-container">
-            <div class="tab-content active" id="presentation">
+            <div class="tab-content active" id="presentation" data-i18n="text1">
                 <p>
                     Je suis titulaire d'un diplome d'ingénieur d'etat en informatique et Gestion souhaitant se spécialisant dans le développement web et mobile. J’oriente mes études dans ce domaine, guidé par mon désir d'apprendre et ma curiosité. En tant que passionné, j’aime participer activement aux activités d’une entreprise, mais aussi créer des projets personnels, dans le but d'augmenter en compétences.
-                    Le développement web et mobile est apparu comme une évidence lors de mes formations. Créer des applications web toujours plus durables, soucieuses de l'experience utilisateur et de plus en plus performantes, est un enjeu actuel très important et d'avenir. Le mobile change notre quotidien, il y prend une place de plus en plus importante. Je veux prendre part à ce changement.
-                    Si vous souhaitez en apprendre plus sur moi, ou me contacter, n'hésitez plus, vous pouvez explorer ce site ou télécharger mon CV
                 </p>
             </div>
 
@@ -126,7 +125,7 @@ emailjs.init("YOUR_PUBLIC_KEY");
                 <img src="https://flagcdn.com/w160/ma.png" alt="Maroc">
             </div>
             <div class="langue-text">
-                <h3><span>Arabe</span></h3>
+                <h3 data-i18n="arabe"><span>Arabe</span></h3>
                 <p>Langue Maternelle</p>
             </div>
         </div>
@@ -136,7 +135,7 @@ emailjs.init("YOUR_PUBLIC_KEY");
                 <img src="https://flagcdn.com/w160/fr.png" alt="France">
             </div>
             <div class="langue-text">
-                <h3><span>Français</span></h3>
+                <h3 data-i18n="Français"><span>Français</span></h3>
                 <p>Bilingue</p>
             </div>
         </div>
@@ -146,7 +145,7 @@ emailjs.init("YOUR_PUBLIC_KEY");
                 <img src="https://flagcdn.com/w160/gb.png" alt="UK">
             </div>
             <div class="langue-text">
-                <h3><span>Anglais</span></h3>
+                <h3 data-i18n="Anglais"> <span>Anglais</span></h3>
                 <p>Usage Professionnel</p>
             </div>
         </div>
@@ -156,7 +155,7 @@ emailjs.init("YOUR_PUBLIC_KEY");
                 <img src="https://flagcdn.com/w160/de.png" alt="Allemagne">
             </div>
             <div class="langue-text">
-                <h3><span>Allemand</span></h3>
+                <h3 data-i18n="Allemand"><span>Allemand</span></h3>
                 <p>Intermédiaire (B1)</p>
             </div>
         </div>
@@ -164,70 +163,70 @@ emailjs.init("YOUR_PUBLIC_KEY");
     </div>
             </div>
 
-            <div class="tab-content" id="skills">
-                <ul>
-                    <li><span>Intelligence émotionnelle :</span>  Je suis quelqu'un d'empathique, sympathique et toujours optimiste. </li>
-                    <li><span>Intelligence relationnelle :</span> Esprit d'équipe, agit toujours pour maintenir une coopération positive.</li>
-                    <li><span>Curiosité :</span> J'aime toujours en apprendre plus sur tous les sujets.</li>
-                    <li><span>Ponctualité</span> et bonne gestion du temps.</li>
-                    <li><span>Capacité de résolution :</span> J'aime trouver la solution la plus simple pour répondre à un besoin, que ce soit seul ou en équipe.</li>
+            <div class="tab-content" id="skills"  >
+                <ul >
+                    <li data-i18n="text2"><span>Intelligence émotionnelle :</span>  Je suis quelqu'un d'empathique, sympathique et toujours optimiste. </li>
+                    <li data-i18n="text3" ><span>Intelligence relationnelle :</span> Esprit d'équipe, agit toujours pour maintenir une coopération positive.</li>
+                    <li data-i18n="text4"><span>Curiosité :</span> J'aime toujours en apprendre plus sur tous les sujets.</li>
+                    <li data-i18n="text5"><span>Ponctualité</span> et bonne gestion du temps.</li>
+                    <li data-i18n="text6"><span>Capacité de résolution :</span> J'aime trouver la solution la plus simple pour répondre à un besoin, que ce soit seul ou en équipe.</li>
 
                 </ul>
             </div>
 
             <div class="tab-content" id="passions">
                 <ul>
-                    <li><span>Voyage</span></li>
-                    <li><span>Sport</span></li>
-                    <li><span>Dessin</span></li>
+                    <li  data-i18n="Voyage"><span>Voyage</span></li>
+                    <li  data-i18n="Sport"><span>Sport</span></li>
+                    <li  data-i18n="Dessin"><span>Dessin</span></li>
                 </ul>
             </div>
         </div>
     </div>
 
     <div class="APropose-img">
-        <img src="01.png" alt="Profile img">
+        <img src="image/01.png" alt="Profile img">
     </div>
 </section>
 
 <!--pour les formation -->
 <section class="Diplômes" id="Diplômes">
 
-            <h2 class="heading" style="margin-bottom: 100px; font-family: 'Dancing Script', cursive;"> Diplômes</h2>    
+            <h2 class="heading" data-i18n="Diplômess" style="margin-bottom: 100px; font-family: 'Dancing Script', cursive;" > Diplômes</h2>    
     <div class="timeline">
         <div class="container left">
             <div class="date-label">2021 - 2024</div>
             <div class="content">
-                <h3>Diplome d’ingénierie D'Etat (bac +5)</h3>
-                <p> Diplome d’ingénierie en Informatique et Gestion </p>
-                <p>EHEI (Ecole des Hautes Etudes d’ingénierie), Oujda</p>
+                <h3 data-i18n="Diplômesh1">Diplome d’ingénierie D'Etat (bac +5)</h3>
+                <p data-i18n="Diplômesp1"> Diplome d’ingénierie en Informatique et Gestion </p>
+                <p data-i18n="Diplômesp11">EHEI (Ecole des Hautes Etudes d’ingénierie), Oujda</p>
             </div>
         </div>
 
         <div class="container right">
             <div class="date-label">2019 - 2021</div>
             <div class="content">
-                <h3>Diplome technicien Spécialisé (bac +2)</h3>
-                <p>Diplome technicien Spécialisé en Développement Informatique </p>
-                <p>ISTA (Institut Spécialisé de Technologie Appliquée Lazaret), Oujda</p>
+                <h3 data-i18n="Diplômesh2">Diplome technicien Spécialisé (bac +2)</h3>
+                <p data-i18n="Diplômesp2">Diplome technicien Spécialisé en Développement Informatique </p>
+                <p data-i18n="Diplômesp22">ISTA (Institut Spécialisé de Technologie Appliquée Lazaret), Oujda</p>
             </div>
         </div>
 
         <div class="container left">
             <div class="date-label">2018 - 2029</div>
             <div class="content">
-                <h3> FSO première année </h3>
-                <p> Options: Physique et Chimie</p>
-                <p>FSO (Université Mohammed Premier faculté des sciences),Oujda </p>
+                <h3 data-i18n="Diplômesh3"> FSO première année </h3>
+                <p data-i18n="Diplômesh3"> Options: Physique et Chimie</p>
+                <p data-i18n="Diplômesp33">FSO (Université Mohammed Premier faculté des sciences),Oujda </p>
             </div>
         </div>
 
         <div class="container right">
             <div class="date-label">2017 - 2018</div>
             <div class="content">
-                <h3> Baccalauréat Scientifique</h3>
-                <p>BAC Sciences Physique et Chimie</p>
-                <p>Lycée Zaytoune , Elaioune Sidi Malouk</p>
+                <h3 data-i18n=" Diplômesh4"> Baccalauréat Scientifique</h3>
+                <p data-i18n=" Diplômesh4">BAC Sciences Physique et Chimie</p>
+                <p data-i18n=" Diplômesh44">Lycée Zaytoune , Elaioune Sidi Malouk</p>
             </div>
         </div>
     </div>
@@ -238,17 +237,17 @@ emailjs.init("YOUR_PUBLIC_KEY");
 <!-- attestation-->
 
 <section class="referents-section" id="Attestations">
-    <h2 class="heading" style="margin-bottom:-50px;font-family: 'Dancing Script', cursive;">Attestations</h2>
+    <h2 class="heading" style="margin-bottom:-50px;font-family: 'Dancing Script', cursive;" data-i18n=" Attestationss">Attestations</h2>
     
     <div class="ref-wrapper">
         <div class="ref-card">
             <div class="ref-img-box">
-                <img src="salse.png" >
+                <img src="image/salse.png" >
             </div>
             <div class="ref-text-content">
-                <h3>SalesForce</h3>
+                <h3 >SalesForce</h3>
                 <div class="ref-line"></div>
-                <p> Attestation de formation SalesForce à l’école (EHEI)</p>
+                <p data-i18n="Attestationsp1"> Attestation de formation SalesForce à l’école (EHEI)</p>
                                                 <p><span>Mars - Juin 2022  (4 mois)</span></p>
 
                 <a href=class="ref-email">Voir </a>
@@ -257,12 +256,12 @@ emailjs.init("YOUR_PUBLIC_KEY");
 
  <div class="ref-card">
             <div class="ref-img-box">
-                <img src="jalios.jpeg"  >
+                <img src="image/jalios.jpeg"  >
             </div>
             <div class="ref-text-content">
                 <h3>Jalios Community</h3>
                 <div class="ref-line"></div>
-                <p>Attestation de formation jalios community à l’entreprise (GIANTLINK) </p>
+                <p data-i18n="Attestationsp2">Attestation de formation jalios community à l’entreprise (GIANTLINK) </p>
                                 <p><span>Mars - Juin 2022  (4 mois)</span></p>
                 <a href=class="ref-email">Voir </a>
             </div>
@@ -270,12 +269,12 @@ emailjs.init("YOUR_PUBLIC_KEY");
        
           <div class="ref-card">
             <div class="ref-img-box">
-                <img src="desin.png" >
+                <img src="image/desin.png" >
             </div>
             <div class="ref-text-content">
                 <h3>Graphic Design</h3>
                 <div class="ref-line"></div>
-                <p>Attestation de formation Graphic Design <h2>Ps, Ai, Id </h2>   </p>
+                <p data-i18n="Attestationsp3">Attestation de formation Graphic Design <h2>Ps, Ai, Id </h2>   </p>
                                 <p><span>Février - JUIN 2025 (6 mois)</span></p>
 
                 <a href=class="ref-email">Voir </a>
@@ -283,12 +282,12 @@ emailjs.init("YOUR_PUBLIC_KEY");
         </div>
        <div class="ref-card">
             <div class="ref-img-box">
-                <img src="sap.png" >
+                <img src="image/sap.png" >
             </div>
             <div class="ref-text-content">
                 <h3> SAP </h3>
                 <div class="ref-line"></div>
-                <p > Attestation de formation SAP à l’école (EHEI)</p>
+                <p data-i18n="Attestationsp4"> Attestation de formation SAP à l’école (EHEI)</p>
                                                                 <p ><span>Octobre - janvier 2024  (4 mois)</span> </p>
                 <a href=class="ref-email">Voir </a>
             </div>
@@ -300,7 +299,7 @@ emailjs.init("YOUR_PUBLIC_KEY");
 
 
 <section class="Compétences" id="Compétences">
-    <h2 class="heading" style="margin-bottom:10px;font-family: 'Dancing Script', cursive;">Compétences</h2>
+    <h2 class="heading" data-i18n="Compétencess" style="margin-bottom:10px;font-family: 'Dancing Script', cursive;">Compétences</h2>
 
     <div class="services-container" >
         <div class="services-box">
@@ -576,8 +575,8 @@ emailjs.init("YOUR_PUBLIC_KEY");
 <h2 class="heading" style="margin-bottom:-20px;font-family: 'Dancing Script', cursive;" >Portfolio</h2>
 
 <div class="button-group">
-<button class="btn " data-target="perso">Projets personnels</button>
-<button class="btn active" data-target="pro">Projets professionnels</button>
+<button class="btn " data-target="perso"  data-i18n="perso">Projets personnels</button>
+<button class="btn active" data-target="pro"  data-i18n="pro">Projets professionnels</button>
 </div>
 
 <div class="wrapper">
@@ -587,12 +586,12 @@ emailjs.init("YOUR_PUBLIC_KEY");
 <div class="img-flip">
 
 <div class="img-back">
-<h3> Sujet De Stage : </h3>
+<h3 > Sujet De Stage : </h3>
 <h2>Site de recrutement maroc public / privé...</h2>
 </div>
 
 <div class="img-front">
-<img src="11.jpg" alt="">
+<img src="image/11.jpg" alt="">
 </div>
 
 </div>
@@ -617,19 +616,19 @@ emailjs.init("YOUR_PUBLIC_KEY");
 <div class="img-back">
 <h2>Sujet De Stage :</h2>
 
-    <img src="10.png" alt=""><p>
+    <img src="image/10.png" alt=""><p>
 Le projet vise à développer un plugin pour Jalios JPlatform permettant
 une intégration avec la plateforme OpenRainbow pour messagerie,
 appels vocaux et vidéo.
 </p>
-        <img src="03.png" alt="">
+        <img src="image/03.png" alt="">
 
 
 
 </div>
 
 <div class="img-front">
-<img src="033.png" alt="">
+<img src="image/033.png" alt="">
 </div>
 
 </div>
@@ -660,7 +659,7 @@ La Création d’une Application Relative à la Gestion du personnel.
 </div>
 
 <div class="img-front">
-<img src="02.jpg" alt="">
+<img src="image/02.jpg" alt="">
 </div>
 
 </div>
@@ -681,14 +680,14 @@ La Création d’une Application Relative à la Gestion du personnel.
 
 <div class="img-back">
 <h2>Voila le Projet  :</h2>
-<img src="09.png" alt="">
+<img src="image/09.png" alt="">
 
-<img src="07.png" alt="">
-<img src="08.png" alt="">
+<img src="image/07.png" alt="">
+<img src="image/08.png" alt="">
 </div>
 
 <div class="img-front">
-<img src="06.jpg" alt="">
+<img src="image/06.jpg" alt="">
 </div>
 
 </div>
@@ -719,7 +718,7 @@ La Création d’une Application Relative à la Gestion du personnel.
 </div>
 
 <div class="img-front">
-<img src="05.jpg" alt="">
+<img src="image/05.jpg" alt="">
 </div>
 
 </div>
@@ -751,7 +750,7 @@ réalisation d’un site web e-commerce de vente de vetements et de bijoux .
 </div>
 
 <div class="img-front">
-<img src="04.jpg" alt="">
+<img src="image/04.jpg" alt="">
 </div>
 
 </div>
@@ -772,12 +771,12 @@ réalisation d’un site web e-commerce de vente de vetements et de bijoux .
 
 <!-- contact-->
 <section class="contact" id="contact">
-  <h2 class="heading" style="margin-bottom:40px;font-family: 'Dancing Script', cursive; color: black;" >Me contacter</h2>
+  <h2 class="heading" data-i18n="contacter" style="margin-bottom:40px;font-family: 'Dancing Script', cursive; color: black;" >Me contacter</h2>
 
   <form id="contact-form">
      <div class="input-box">
-    <input type="text" name="from_name" placeholder="Votre nom / Prenom" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
-    <input type="email" name="email" placeholder="Votre email" required></div>
+    <input type="text" name="from_name" placeholder="Votre nom / Prenom" >
+    <input type="email" name="email" placeholder="Votre email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"></div>
       <div class="input-box">
     <input type="text" name="subject" placeholder="Objet">
     <textarea name="message" placeholder="Votre message...." required cols="30" rows="10" placeholder="your message"></textarea></div>
@@ -807,11 +806,8 @@ réalisation d’un site web e-commerce de vente de vetements et de bijoux .
 
 
 <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-<script src="script.js"></script>
-
+<script src="script.js" defer></script>
 </body>
 
 
-
 </html>
-
