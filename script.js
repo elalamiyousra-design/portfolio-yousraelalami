@@ -12,15 +12,26 @@ window.onscroll = () => {
 };
 
 
-    // 1. Typed.js Effect
-document.addEventListener('DOMContentLoaded', () => {
-    const typed = new Typed('.multiple-text', {
-        strings: ['Frontend Developer','Backend Developer','design graphique','business management'],
+let typed;
+
+function loadTyped(lang) {
+
+    if (typed) {
+        typed.destroy(); // bach ma yb9ach y3awed
+    }
+
+    typed = new Typed('.multiple-text', {
+        strings: translations[lang].typedTexts,
         typeSpeed: 80,
         backSpeed: 80,
         backDelay: 1200,
         loop: true
     });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    loadTyped("fr"); // langue par défaut
+
 });
 
 
@@ -39,7 +50,37 @@ const translations = {
     nav_home: "Accueil",
     nav_APropose: "À Propos",
     nav_diplome: "Diplômes",
-    nav_contact: "Contact"
+    nav_contact: "Contact",
+àPropose: "À propos",
+Diplômes: "Diplômes",
+Attestations: "Attestations",
+Compétences: "Compétences",
+Portfolio: "Portfolio",
+Contact: "Contact",
+btn_download: "Télécharger CV",
+presentation: "Présentation",
+Langues1: "Langues",
+skills: "Compétences personnelles",
+passions: "Centres d’intérêt",
+
+text1: "Je suis titulaire d’un diplôme d’Ingénieur d’État en Informatique et Gestion des Entreprises, avec une spécialisation en développement web et mobile. Ma passion pour l’apprentissage et ma curiosité guident mon parcours dans ce domaine. En tant que passionnée, j’aime participer activement aux activités en entreprise ainsi que créer des projets personnels afin de développer et renforcer mes compétences.",
+
+arabe: "Arabe",
+Français: "Français",
+Anglais: "Anglais",
+Allemand: "Allemand",
+
+Voyage: "Voyage",
+Sport: "Sport",
+Dessin: "Dessin",
+
+
+  typedTexts: [
+      "Développeuse Frontend",
+      "Développeuse Backend",
+      "Design Graphique",
+      "Gestion d'entreprise"
+    ]
   },
   en: {
     hello: "Hello, My name is",
@@ -54,7 +95,37 @@ const translations = {
     nav_home: "home",
     nav_APropose: "APropose",
     nav_diplome: "Diplomas",
-    nav_contact: "Contact"
+    nav_contact: "Contact",
+     àPropose:"About",
+    Diplômes: "Diplomas",
+    Attestations: "Certificates",
+    Compétences: "Skills",
+    Portfolio: "Portfolio",
+    Contact: "Contact",
+    btn_download: "Download CV",
+    presentation: "Presentation",
+    Langues1: "Languages",
+    skills:"Soft Skills",
+    passions:"Interests",
+    text1:"I hold a State Engineering degree in Computer Science and Management, with a focus on specializing in web and mobile development. My passion for learning and curiosity guide my studies in this field. As an enthusiast, I enjoy actively participating in company activities as well as creating personal projects to enhance my skills.",
+    arabe: "Arabic", 
+    Français: "French",
+    Anglais: "English",
+    Allemand: "German",
+    Voyage: "Traveling",
+    Sport: "Sports",
+    Dessin: "Drawing",
+
+    
+     typedTexts: [
+      "Frontend Developer",
+      "Backend Developer",
+      "Graphic Designer",
+      "Business Management"
+    ]
+
+
+
   },
   ar: {
     hello: "مرحبا، اسمي",
@@ -69,28 +140,207 @@ const translations = {
     nav_home: "الرئيسية",
     nav_APropose: "حول",
     nav_diplome: "الشهادات",
-    nav_contact: "اتصل"
-  }
+    nav_contact: "اتصل",
+    àPropose:"حول",
+    Diplômes:"ديبلوم",
+Attestations :"الشهادات",
+
+    Compétences:"المهارات",
+    Portfolio:"الاعمال",
+    Contact:"للتواصل",
+    btn_download:"تحميل السيرة الذاتية",
+        à_Propose:"حول",
+presentation:"مقدمة",
+Langues1:"اللغات",
+skills:"المهارات الشخصية",
+passions:"الاهتمامات",
+text1:"أحمل شهادة هندسة حكومية في علوم الحاسوب والإدارة، وأطمح للتخصص في تطوير تطبيقات الويب والهواتف المحمولة. ينبع شغفي بالتعلم وفضولي من رغبتي في الدراسة في هذا المجال. وبصفتي شخصًا شغوفًا، أستمتع بالمشاركة الفعّالة في أنشطة الشركة، بالإضافة إلى إنشاء مشاريع شخصية، بهدف تطوير مهاراتي.",
+arabe:"العربية", 
+Français:"الفرنسية",
+Anglais:"الانجليزية",
+Allemand:"الالمانية",
+Voyage:"االسفر",
+Sport:"الرياضة",
+Dessin:" الرسم",
+text2:"الذكاء العاطفي: أنا شخص متعاطف وودود ومتفائل دائماً",
+text3:"الذكاء العلائقي: روح الفريق، والعمل الدائم على الحفاظ على التعاون الإيجابي",
+text4:"الفضول: أستمتع دائماً بتعلم المزيد عن جميع المواضيع",
+text5:"الالتزام بالمواعيد وإدارة الوقت بشكل جيد",
+text6:"مهارات حل المشكلات: أحب إيجاد أبسط الحلول لتلبية الاحتياجات، سواء بمفردي أو ضمن فريق",
+
+ Diplômess:"ديبلوم",
+Diplômesh1:"شهادة هندسية معترف بها من الدولة (مستوى الماجستير)",
+Diplômesp:"شهادة هندسية في علوم الحاسوب والإدارة",
+Diplômesp11:"كلية الدراسات الهندسية العليا، وجدة",
+
+ Diplômesh2:"دبلوم فني متخصص (شهادة جامعية لمدة سنتين بعد المرحلة الثانوية)",
+  Diplômesp2:"دبلوم فني متخصص في تطوير الحاسوب",
+   Diplômesp22:"معهد لازاريت للتكنولوجيا التطبيقية (ISTA)، وجدة",
+
+
+  Diplômesh3:"السنة الأولى في كلية العلوم",
+    Diplômesp3:"التخصصات: الفيزياء والكيمياء",
+      Diplômesp33:"كلية العلوم بجامعة محمد الأول، وجدة",
+
+        Diplômesh4:"شهادة البكالوريا العلمية",
+     Diplômesp4:"شهادة البكالوريا في الفيزياء والكيمياء",
+      Diplômesp44:"مدرسة زيتون الثانوية، العيون سيدي ملوك",
+
+      Attestationss:"الشهادات",
+      Attestationsp1:"شهادة تدريب Salesforce من المدرسة (EHEI)",
+      Attestationsp1:"شهادة تدريب من جاليوس من شركة (GIANTLINK)",
+      Attestationsp2:"شهادة تدريب في التصميم الجرافيكي",
+      Attestationsp3:"شهادة تدريب SAP من المدرسة (EHEI)",
+
+
+      Compétencess:"المهارات",
+      perso:"الاعمال الشخصية",
+      pro:"الاعمال المهنية",
+ contacter:"اتصل بي",
+
+     typedTexts: [
+      "Frontend Developer",
+      "Backend Developer",
+      "Graphic Designer",
+      "Business Management"
+    ]
+  },
+ de:{
+
+  hello: "Hallo, ich heiße",
+name: "Yousra !",
+job:" und ich bin",
+role: "<span>Webentwicklerin</span>",
+intro: "Staatlich geprüfte Ingenieurin für Informatik und Management, mit großer Leidenschaft für Webentwicklung.",
+btn_fr: "Französisch",
+btn_en: "Englisch",
+btn_ar: "Arabisch",
+btn_download: "Lebenslauf herunterladen",
+
+nav_home: "Startseite",
+nav_APropose: "Über mich",
+nav_diplome: "Diplome",
+nav_contact: "Kontakt",
+
+àPropose:"Über mich",
+Diplômes:"Diplome",
+Attestations :"Zertifikate",
+
+Compétences:"Fähigkeiten",
+Portfolio:"Portfolio",
+Contact:"Kontakt",
+btn_download:"Lebenslauf herunterladen",
+
+à_Propose:"Über mich",
+presentation:"Präsentation",
+Langues1:"Sprachen",
+skills:"Persönliche Fähigkeiten",
+passions:"Interessen",
+
+text1:"Ich habe einen staatlich anerkannten Ingenieurabschluss in Informatik und Management und möchte mich auf die Entwicklung von Web- und mobilen Anwendungen spezialisieren. Meine Leidenschaft für das Lernen und meine Neugier motivieren mich, mich in diesem Bereich weiterzuentwickeln. Als engagierte Person beteilige ich mich gerne aktiv an Unternehmensaktivitäten und erstelle auch persönliche Projekte, um meine Fähigkeiten zu verbessern.",
+
+arabe:"Arabisch", 
+Français:"Französisch",
+Anglais:"Englisch",
+Allemand:"Deutsch",
+
+Voyage:"Reisen",
+Sport:"Sport",
+Dessin:"Zeichnen",
+
+text2:"Emotionale Intelligenz: Ich bin eine einfühlsame, freundliche und immer optimistische Person.",
+text3:"Soziale Kompetenz: Teamgeist und ständiges Bemühen, eine positive Zusammenarbeit aufrechtzuerhalten.",
+text4:"Neugier: Ich lerne immer gerne mehr über verschiedene Themen.",
+text5:"Pünktlichkeit und gutes Zeitmanagement.",
+text6:"Problemlösungsfähigkeiten: Ich finde gerne einfache Lösungen für Bedürfnisse, sowohl allein als auch im Team.",
+
+Diplômess:"Diplome",
+
+Diplômesh1:"Staatlich anerkannter Ingenieurabschluss (Master-Niveau)",
+Diplômesp:"Ingenieurabschluss in Informatik und Management",
+Diplômesp11:"Hochschule für Ingenieurwissenschaften, Oujda",
+
+Diplômesh2:"Fachtechniker-Diplom (zweijähriger Hochschulabschluss nach dem Abitur)",
+Diplômesp2:"Fachtechniker-Diplom in Informatikentwicklung",
+Diplômesp22:"Institut für angewandte Technologie Lazaret (ISTA), Oujda",
+
+Diplômesh3:"Erstes Jahr an der Fakultät für Wissenschaften",
+Diplômesp3:"Fachrichtung: Physik und Chemie",
+Diplômesp33:"Fakultät für Wissenschaften, Mohammed-I.-Universität, Oujda",
+
+Diplômesh4:"Naturwissenschaftliches Abitur",
+Diplômesp4:"Abitur in Physik und Chemie",
+Diplômesp44:"Zitoun-Gymnasium, El Aioun Sidi Mellouk",
+
+Attestationss:"Zertifikate",
+Attestationsp1:"Salesforce-Zertifikat von der Schule (EHEI)",
+Attestationsp1:"Praktikumszertifikat bei Galios von der Firma (GIANTLINK)",
+Attestationsp2:"Zertifikat für Ausbildung im Grafikdesign",
+Attestationsp3:"SAP-Zertifikat von der Schule (EHEI)",
+
+Compétencess:"Fähigkeiten",
+perso:"Persönliche Projekte",
+pro:"Berufliche Projekte",
+contacter:"Kontaktieren Sie mich",
+
+Attestationsp1:"Salesforce-Zertifikat von der Schule (EHEI)",
+Attestationsp2:"Praktikumszertifikat bei Galios von der Firma (GIANTLINK)",
+Attestationsp3:"Zertifikat für Ausbildung im Grafikdesign",
+Attestationsp4:"SAP-Zertifikat von der Schule (EHEI)",
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+};
+function changeLang(lang){
+
+document.querySelectorAll("[data-i18n]").forEach(el=>{
+const key = el.dataset.i18n;
+
+if(translations[lang] && translations[lang][key]){
+el.innerHTML = translations[lang][key];
+}
+
+});
+
+if(lang==="ar"){
+document.documentElement.setAttribute("dir","rtl");
+document.body.style.textAlign="right";
+}else{
+document.documentElement.setAttribute("dir","ltr");
+document.body.style.textAlign="left";
+}
+
+const langDisplay={
+fr:"Fr",
+en:"En",
+ar:"Ar",
+de:"De"
 };
 
-function changeLang(lang) {
-    // 1. Votre logique de traduction existante
-    document.querySelectorAll("[data-i18n]").forEach(el => {
-        const key = el.dataset.i18n;
-        if (translations[lang] && translations[lang][key]) {
-            el.innerHTML = translations[lang][key];
-        }
-    });
+document.getElementById("current-lang").innerText=langDisplay[lang];
 
-    // 2. Gestion de la direction RTL
-    document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+const cv=document.getElementById("cv-download");
 
-    // 3. Mise à jour du texte dans le bouton dropdown
-    const langDisplay = { 'fr': 'Fr', 'en': 'En', 'ar': 'Ar' };
-    document.getElementById("current-lang").innerText = langDisplay[lang];
+if(!cv) return;
+
+if(lang==="fr") cv.href="CV-fr.pdf";
+if(lang==="en") cv.href="cv-en.pdf";
+if(lang==="ar") cv.href="cv-ar.pdf";
+if(lang==="de") cv.href="CV-allemg.pdf";
+
 }
-// Initialisation par défaut
-changeLang("fr");
 
 
 //la présentation à rester affichée, mais nous n'avons pas correctement lié les autres boutons à leurs contenus respectifs.
@@ -214,7 +464,7 @@ window.addEventListener('load', () => {
     // On attend 1 seconde pour l'effet visuel
     setTimeout(() => {
         preloader.classList.add('preloader-hidden');
-    }, 1000);
+    }, 300);
 });
 
 
