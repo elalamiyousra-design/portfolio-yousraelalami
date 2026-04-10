@@ -1503,3 +1503,106 @@ span{
     color: #666;
     font-weight: 400;
 }
+
+html[dir="rtl"] header {
+    flex-direction: row-reverse;
+}
+
+/* --- 1. Definir l'animation dyal l-khoufou (Floating) --- */
+@keyframes floatAttestation {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px); /* kat-tla3 chwiya */
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* --- 2. Appliquer l'animation 3la l-cadre l-m-incliné --- */
+/* Hit nti kheddama b-classe .ref-img-box l-hadok l-tsawer */
+.ref-img-box {
+    animation: floatAttestation 5s ease-in-out infinite;
+    display: inline-block; /* Bach t-harrek mzyan */
+}
+
+/* --- 3. Décalage (Timing) bach may-t7errouch kamlin b7al l-makanat --- */
+/* L-card l-lowla (Salesforce) */
+.ref-card:nth-child(1) .ref-img-box {
+    animation-delay: 0s;
+}
+
+/* L-card l-tanya (Jalios) */
+.ref-card:nth-child(2) .ref-img-box {
+    animation-delay: 1.5s;
+}
+
+/* L-card l-talta (Graphic Design) */
+.ref-card:nth-child(3) .ref-img-box {
+    animation-delay: 3s;
+}
+
+/* --- 4. Hover Effect: Fach t-7etti l-mouse, t-tzad l-animation --- */
+.ref-card:hover .ref-img-box {
+    transform: scale(1.05) translateY(-20px) !important;
+    animation-play-state: paused; /* kat-wqef l-auto-float fach t-hoveri */
+    transition: transform 0.3s ease;
+}
+
+/* Bach t-tla3 hta l-boite l-griya chwiya fach t-hoveri l-card kamla */
+.ref-card:hover .ref-text-content {
+    box-shadow: 0 15px 30px rgba(155, 72, 25, 0.2);
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+}   
+
+
+/* 1. تعريف الأنيميشن: العنصر كيبدأ شفاف وهابط لتحت شوية وكيطلع لبلاصتو */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.home-img, 
+.home-content h1, 
+.home-content h3, 
+.home-content p, 
+.social-media, 
+.home-content .btn {
+    opacity: 0; /* كيبداو مخفيين */
+    animation: fadeInUp 0.6s ease-out forwards; /* الأنيميشن كتستغرق 0.6 ثانية */
+}
+
+
+.home-img {
+    animation-delay: 0.6s;
+}
+
+.home-content h3 {
+    animation-delay: 0.2s;
+}
+
+.home-content h1 {
+    animation-delay: 0.3s;
+}
+
+.home-content p {
+    animation-delay: 0.4s;
+}
+
+.social-media {
+    animation-delay: 0,5s;
+}
+
+.home-content .btn {
+    animation-delay: 1.6s;
+}
