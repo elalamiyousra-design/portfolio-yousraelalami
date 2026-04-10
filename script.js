@@ -1,3 +1,9 @@
+// 1. Force la page à commencer toujours du haut (Home) lors de l'actualisation
+if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+}
+window.scrollTo(0, 0);
+
 let menu = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
 
@@ -505,3 +511,39 @@ window.addEventListener('load', () => {
         alert("❌ Erreur lors de l'envoi. Vérifie la console pour plus de détails.");
       });
   });
+
+function startAutoScroll(vitesse = 4) {
+    let scrollInterval = setInterval(() => {
+        // 1. Kan-checkiw wach wselna l-akhir dyal l-page
+        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+            
+            // 2. Fach n-wesslo l-teht, n-habso l-scroll automatique
+            clearInterval(scrollInterval);
+
+            // 3. n-tsennaw wahed chwiya (mitalan 500ms) bach l-user i-shouf l-footer
+            setTimeout(() => {
+                // 4. Terje3 l-section "APropose" (id="APropose" f l-HTML dyalk)
+                const aproposeSection = document.getElementById('home');
+                if (aproposeSection) {
+                    aproposeSection.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 500);
+
+        } else {
+            // Ila baqi mawselnach l-teht, n-kemmlo l-scroll
+            window.scrollBy(0, vitesse);
+        }
+    }, 10);
+
+    // Stop automatique ila l-user qass l-ecran
+    const stopScroll = () => clearInterval(scrollInterval);
+    window.addEventListener("mousedown", stopScroll);
+    window.addEventListener("wheel", stopScroll);
+    window.addEventListener("touchstart", stopScroll);
+}
+// Tqdri t-lansiha ghir t-tssala l-animation dyal l-preloader
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        startAutoScroll(4); // tqdri tbeddli 1.5 b l-vitesse lli bghiti
+    }, 5000); // kat-tsenna 2 swaye3 mn b3d l-load
+});
